@@ -40,10 +40,17 @@ class TestComplejo(unittest.TestCase):
     
     def test_mult(self):
         a = complejo.Complejo(0,1)
-        b = complejo.Complejo(1,2)
+        b = complejo.Complejo(2,2)
+        c = complejo.Complejo(8,6)
         a.mult(a)
         self.assertAlmostEqual(a.real, -1.0)
         self.assertAlmostEqual(a.imaginario, 0.0)
+        
+        b.mult(c)
+        self.assertAlmostEqual(b.real, 4.0)
+        self.assertAlmostEqual(b.imaginario, 28.0)
+        
+        
 
 
 if __name__ == '__main__':
